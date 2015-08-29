@@ -14,20 +14,32 @@
 #   }
 #
 ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'perfomance_brasil_development.db')
+  :adapter   => 'postgresql',
+  :database  => 'performance_brasil_development',
+  :username  => 'yuizinha',
+  :password  => 'arroz1',
+  :host      => 'localhost',
+  :port      => 5432
 
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'perfomance_brasil_production.db')
+  :adapter   => 'postgresql',
+  :database  => 'performance_brasil_production',
+  :username  => 'postgresql',
+  :password  => '',
+  :host      => 'localhost',
+  :port      => 5432
 
 }
 
 ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'perfomance_brasil_test.db')
+  :adapter   => 'postgresql',
+  :database  => 'performance_brasil_test',
+  :username  => 'root',
+  :password  => '',
+  :host      => 'localhost',
+  :port      => 5432
 
 }
 
